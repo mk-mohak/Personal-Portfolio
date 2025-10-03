@@ -1,0 +1,233 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.paper-texture-light {
+    /* Subtle paper grain for light backgrounds like 'ivory' */
+    background-image: 
+        linear-gradient(45deg, rgba(58, 90, 64, 0.015) 25%, transparent 25%, transparent 75%, rgba(58, 90, 64, 0.015) 75%, rgba(58, 90, 64, 0.015)),
+        linear-gradient(-45deg, rgba(58, 90, 64, 0.015) 25%, transparent 25%, transparent 75%, rgba(58, 90, 64, 0.015) 75%, rgba(58, 90, 64, 0.015));
+    background-size: 3px 3px;
+}
+
+.paper-texture-dark { 
+    /* Slightly more pronounced texture for darker backgrounds like 'my-story-bg' or 'moments-bg' */
+    background-image: 
+        linear-gradient(45deg, rgba(0, 0, 0, 0.025) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.025) 75%, rgba(0, 0, 0, 0.025)),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.025) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.025) 75%, rgba(0, 0, 0, 0.025));
+    background-size: 3px 3px;
+}
+
+/* Navbar Active Link Styling */
+.nav-link.active {
+    color: #9984e8; 
+    font-weight: 700;
+}
+.mobile-nav-link.active {
+    color: #9984e8;
+    font-weight: 600;
+}
+
+/* Button Ripple Effect */
+.ripple-button {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); /* Slightly less opaque for better blend */
+    transform: scale(0);
+    animation: ripple-animation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none; 
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* My Story Section - Pull Quotes */
+.pull-quote {
+    position: relative; 
+}
+
+/* My Story Section - Passion Badges Tooltips */
+.passion-badge {
+    position: relative;
+    cursor: default;
+}
+
+.passion-badge .tooltip {
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background-color: #3A5A40; /* Forest Green */
+    color: #FAF0E6; /* Ivory */
+    padding: 8px 14px; 
+    border-radius: 6px;
+    font-size: 0.75rem; /* Slightly smaller for tooltips */
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins for tooltip text */
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+.passion-badge:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* Milestones Section - Timeline Card Desktop Alignment */
+@media (min-width: 768px) { /* md breakpoint */
+    .timeline-item:nth-child(even) {
+        margin-left: auto; 
+    }
+    /* Spacing for timeline items when in grid */
+    #timeline-container.md\\:grid .timeline-item:nth-child(odd) {
+        grid-column: 1;
+    }
+    #timeline-container.md\\:grid .timeline-item:nth-child(even) {
+        grid-column: 2;
+        justify-self: end;
+    }
+    /* Ensure the timeline items still stack correctly on mobile if grid is used */
+    @media (max-width: 767.98px) {
+        #timeline-container.md\\:grid .timeline-item {
+            grid-column: 1 / -1;
+            margin-left: 0;
+            padding-left:0;
+            padding-right:0;
+        }
+    }
+}
+
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .moments-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .moments-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.moment-card {
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 1rem;    
+  overflow: hidden;
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.moment-card:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 5;
+}
+
+.moment-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+/* Connect Section - Social Icon Glow & Hover */
+.social-icon.group:hover i {
+    filter: drop-shadow(0 0 10px #B2A4FF); /* Lavender glow, slightly larger */
+}
+
+/* Accessibility: Focus Styles */
+a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
+    outline: 3px solid #B2A4FF;
+    outline-offset: 2px;
+    border-radius: 3px; 
+}
+/* For elements that might already have rounded corners */
+.ripple-button:focus-visible, .moment-card:focus-visible {
+    outline-offset: 4px;
+}
+/* Ensure mobile menu buttons also get focus style */
+#mobile-menu-button:focus-visible, #mobile-menu-close-button:focus-visible {
+     outline: 3px solid #3A5A40; /* Forest Green for contrast on ivory bg */
+}
+
+
+/* Animated Elements - base for JS animations */
+.animated-element {
+    opacity: 0;
+}
+
+/* Custom Scrollbar (Optional, for aesthetics) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #E6DACE; /* Darker Ivory for track */
+}
+::-webkit-scrollbar-thumb {
+    background: #6B5F84; /* Lavender */
+    border-radius: 5px;
+    border: 2px solid #E6DACE; /* Track color border */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6B5F84; /* Darker Lavender on hover */
+}
+
+.fill-ivory { fill: #FAF0E6; }
+.fill-my-story-bg { fill: #E6DACE; }
+.fill-moments-bg { fill: #D8CBBF; }
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: #0f5132;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+

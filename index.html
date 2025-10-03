@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devanshi Dubey • Personal Portfolio</title>
+    <meta name="description" content="Explore the personal journey, stories, and Timelines of Devanshi Dubey.">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ivory': '#FAF0E6', // Soft ivory
+                        'forest-green': '#2E5347', // Vibrant accent 1 (or primary dark)
+                        'lavender': '#B2A4FF',     // Vibrant accent 2 (or primary light accent)
+                        'dark-slate': '#2F4F4F',   // For footer background (charcoal/deep plum like)
+                        'text-main': '#333333',
+                        'text-light': '#F0F0F0',
+                        'my-story-bg': '#E6DACE',
+                        'moments-bg': '#E6DACE',  // Another darker ivory for Moments
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        lora: ['Lora', 'serif'],
+                        pacifico: ['Pacifico', 'cursive'],
+                        caveat: ['Caveat', 'cursive'],
+                        'montserrat-alternates': ['"Montserrat Alternates"', 'sans-serif'],
+                        philosopher: ['Philosopher', 'serif'],
+
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            h1, h2, h3, h4, h5, h6 {
+                @apply font-poppins;
+            }
+            p, span, div, li, a, button { /* Added button for consistent font */
+                @apply font-poppins;
+            }
+            body {
+                @apply bg-ivory text-text-main;
+            }
+        }
+        .section-title {
+            @apply text-4xl md:text-5xl font-bold text-forest-green mb-12 text-center;
+        }
+        .section-padding { /* Adjusted padding for 80-120px desktop, scaled for mobile */
+            @apply py-20 md:py-28 px-6 md:px-12 lg:px-20; /* e.g. 80px mobile, 112px tablet, ~112px desktop */
+        }
+        .organic-divider svg {
+            display: block;
+            width: 100%;
+            height: auto; 
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Navbar START -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-x-10">
+                <div class="hidden md:flex items-center gap-x-10">
+                    <a href="#home"
+                        class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Home</a>
+                    <a href="#my-story"
+                        class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">My
+                        Story</a>
+                    <a href="#milestones"
+                        class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Milestones</a>
+                    <a href="#moments"
+                        class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Featured
+                        Work</a>
+                    <a href="#connect"
+                        class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Connect</a>
+                </div>
+            </div>
+
+            <div class="hidden md:flex">
+                <!-- 
+                MODIFIED FOR GOOGLE DRIVE: 
+                Replace 'YOUR_FILE_ID' with the ID from your Google Drive share link.
+                The link format must be: https://drive.google.com/uc?export=download&id=YOUR_FILE_ID
+            -->
+                <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" rel="noopener noreferrer"
+                    class="group inline-flex items-center gap-x-2 bg-transparent border-2 border-forest-green text-forest-green px-4 py-1 rounded-lg font-semibold text-base hover:bg-forest-green hover:text-[#F5F3FF] text-base transition-all duration-300 shadow-sm">
+                    <span>Download CV</span>
+                    <i data-lucide="download" class="h-4 w-4 transition-transform duration-300"
+                        style="stroke-width:3;"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="hamburger md:hidden text-forest-green focus:outline-none"
+                aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Navbar END -->
+
+    <!-- Mobile Menu Overlay START -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-ivory/95 backdrop-blur-lg z-40 hidden flex flex-col items-center justify-start space-y-8 overflow-y-auto pt-24 pb-12">
+        <button id="mobile-menu-close-button" class="absolute top-8 right-8 text-forest-green focus:outline-none"
+            aria-label="Close menu">
+        </button>
+        <a href="#home"
+            class="mobile-nav-link font-montserrat-alternates text-3xl text-forest-green hover:text-lavender transition-colors">Home</a>
+        <a href="#my-story"
+            class="mobile-nav-link font-montserrat-alternates text-3xl text-forest-green hover:text-lavender transition-colors">My
+            Story</a>
+        <a href="#milestones"
+            class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Timelines</a>
+        <a href="#moments"
+            class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Moments</a>
+        <a href="#connect"
+            class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Connect</a>
+        <div class="border-t border-forest-green/20 w-1/2 my-4"></div>
+
+        <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" rel="noopener noreferrer"
+            class="group inline-flex items-center gap-x-2 bg-forest-green text-[#F5F3FF] px-5 py-3 rounded-lg text-xl font-semibold transition-all duration-300 shadow-lg">
+            <span>Download CV</span>
+            <i data-lucide="download" class="h-5 w-5" style="stroke-width:3;"></i>
+        </a>
+    </div>
+    <!-- Mobile Menu Overlay END -->
+
+    <!-- Hero Section START -->
+    <section id="home"
+        class="h-screen flex flex-col items-center justify-center text-center section-padding bg-ivory paper-texture-light relative overflow-hidden bg-cover bg-center"
+        style="background-image: url('images/bgh_02.png');">
+        <div class="relative z-10 animated-element">
+            <h1 class="text-5xl md:text-7xl font-semibold text-[#2E5347] mb-4 font-montserrat-alternates">Devanshi Dubey
+            </h1>
+            <p class="text-xl md:text-2xl text-[#F5F3FF] mb-6 font-lora font-semibold italic">Fighter • Dreamer •
+                Storyteller</p>
+            <p class="text-lg md:text-xl text-[#F5F3FF] mb-10 max-w-md mx-auto">“Between two worlds, I found my own.”
+            </p>
+            <a href="#my-story"
+                class="ripple-button bg-forest-green text-[#F5F3FF] px-6 py-2 rounded-lg text-md font-semibold hover:bg-transparent border-[3.3px] border-forest-green hover:text-forest-green transition-all duration-300 shadow-lg">
+                Begin the Journey
+            </a>
+        </div>
+        <div class="absolute bottom-10 center transform -translate-x-1/2 z-10 animated-element"
+            data-animation-delay="0.5">
+            <a href="#my-story" aria-label="Scroll to My Story section">
+                <i data-lucide="arrow-down-circle" class="h-10 w-10 text-forest-green animate-bounce-slow"></i>
+            </a>
+        </div>
+    </section>
+    <!-- Hero Section END -->
+
+    <!-- My Story Section START -->
+    <section id="my-story" class="section-padding bg-my-story-bg paper-texture-dark">
+        <div class="container mx-auto">
+            <h2 class="section-title animated-element">My Story</h2>
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2 animated-element" data-animation-delay="0.1">
+                    <img src="images/ProfileImage2.jpg" alt="Devanshi Dubey's candid photo"
+                        class="rounded-lg shadow-xl w-full h-auto object-cover aspect-[3/4]">
+                </div>
+                <div class="md:col-span-3 space-y-6 animated-element" data-animation-delay="0.2">
+                    <p class="text-lg leading-relaxed">Born with cystic fibrosis but not diagnosed until age 19, I grew
+                        up in India, where limited awareness and lack of access to genetic testing meant I lived for
+                        years without the full picture of my health — until moving abroad for the first time.
+                    </p>
+                    <div
+                        class="pull-quote border-l-4 border-forest-green pl-4 italic text-xl text-forest-green my-6 font-lora">
+                        "Travel taught me the art of wonder, and resilience in equal measure."
+                    </div>
+                    <p class="text-lg leading-relaxed">Through years of navigating hospital stays, procedures, and the
+                        uncertainty of living with a chronic rare disease, I’ve learned the power of advocacy and the
+                        importance of patient voices in healthcare. I am committed to advancing global access to care,
+                        promoting equity in healthcare systems, and highlighting the mental health impact of chronic
+                        illness. With my scientific background and lived experience, I bring a unique perspective to
+                        patient engagement — working to build stronger connections between patients, clinicians,
+                        researchers, and industry to drive meaningful change and inspire hope.</p>
+
+                    <!-- Button Added Here -->
+                    <div class="mt-8">
+                        <a href="journey.html"
+                            class="ripple-button bg-transparent border-2 border-forest-green text-forest-green px-4 py-2 rounded-xl text-[0.85rem] font-semibold hover:bg-forest-green hover:text-ivory transition-all duration-300 shadow-lg inline-block">
+                            Read more about my journey
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- My Story Section END -->
+
+    <!-- Organic Divider START -->
+    <div class="organic-divider bg-[#E6DACE]">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill: #FAF0E6;">
+            <path d="M0,30 C240,100 480,0 720,30 S1200,100 1440,30 L1440,0 L0,0 Z"
+                transform="scale(1, -1) translate(0, -100)" />
+        </svg>
+    </div>
+    <!-- Organic Divider END -->
+
+    <!-- Milestones Section START -->
+
+    <section id="milestones" class="section-padding bg-ivory paper-texture-light">
+        <div class="container mx-auto">
+            <h2 class="section-title animated-element">Milestones</h2>
+            <div class="relative">
+                <div
+                    class="hidden md:block absolute top-0 bottom-0 left-1/2 w-1 bg-lavender/80 rounded-full transform -translate-x-1/2">
+                </div>
+
+                <div id="timeline-container" class="space-y-16 md:space-y-0 md:grid md:gap-y-16">
+                    <div class="timeline-item md:w-1/2 md:pr-8 animated-element">
+                        <div class="md:hidden w-full h-1 bg-lavender/50 mb-4"></div>
+                        <div class="bg-white rounded-lg shadow-xl border border-lavender/30 w-full overflow-hidden">
+                            <img src="https://placehold.co/600x400/E6DACE/3A5A40?text=Adventure"
+                                alt="First solo backpacking trip through Southeast Asia"
+                                class="w-full aspect-video object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-2">
+                                    <i data-lucide="backpack" class="h-8 w-8 text-forest-green mr-3"
+                                        aria-label="Backpack icon"></i>
+                                    <span class="text-2xl font-bold text-forest-green">2015</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-text-main mb-1">First Solo Backpacking Trip</h3>
+                                <p class="text-text-main/80">Ventured through Southeast Asia, discovering independence
+                                    and
+                                    the beauty of unfamiliar paths. It changed my perspective on everything.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item md:w-1/2 md:ml-auto md:pl-8 animated-element">
+                        <div class="md:hidden w-full h-1 bg-lavender/50 mb-4"></div>
+                        <div class="bg-white rounded-lg shadow-xl border border-lavender/30 w-full overflow-hidden">
+                            <img src="https://placehold.co/600x400/E6DACE/3A5A40?text=Poem"
+                                alt="A book showing a published poem" class="w-full aspect-video object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-2">
+                                    <i data-lucide="edit-3" class="h-8 w-8 text-forest-green mr-3"
+                                        aria-label="Pen icon"></i>
+                                    <span class="text-2xl font-bold text-forest-green">2018</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-text-main mb-1">Published My First Poem</h3>
+                                <p class="text-text-main/80">Seeing my words in print was a quiet victory, affirming my
+                                    love
+                                    for creative expression and sharing stories.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item md:w-1/2 md:pr-8 animated-element">
+                        <div class="md:hidden w-full h-1 bg-lavender/50 mb-4"></div>
+                        <div class="bg-white rounded-lg shadow-xl border border-lavender/30 w-full overflow-hidden">
+                            <img src="https://placehold.co/600x400/E6DACE/3A5A40?text=New+City"
+                                alt="Vibrant city skyline" class="w-full aspect-video object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-2">
+                                    <i data-lucide="map-pin" class="h-8 w-8 text-forest-green mr-3"
+                                        aria-label="Map pin icon"></i>
+                                    <span class="text-2xl font-bold text-forest-green">2021</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-text-main mb-1">Moved to a New City</h3>
+                                <p class="text-text-main/80">Embraced the unknown and started a new chapter in a vibrant
+                                    city, learning to build community from scratch.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item md:w-1/2 md:ml-auto md:pl-8 animated-element">
+                        <div class="md:hidden w-full h-1 bg-lavender/50 mb-4"></div>
+                        <div class="bg-white rounded-lg shadow-xl border border-lavender/30 w-full overflow-hidden">
+                            <img src="https://placehold.co/600x400/E6DACE/3A5A40?text=Hiking"
+                                alt="Mountain landscape from a challenging hike"
+                                class="w-full aspect-video object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-2">
+                                    <i data-lucide="mountain-snow" class="h-8 w-8 text-forest-green mr-3"
+                                        aria-label="Snowy mountain icon"></i>
+                                    <span class="text-2xl font-bold text-forest-green">2023</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-text-main mb-1">Completed a Challenging Hike</h3>
+                                <p class="text-text-main/80">Pushed my limits on a multi-day trek, finding strength I
+                                    didn't
+                                    know I had amidst breathtaking landscapes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section END -->
+
+    <!-- Organic Divider START -->
+    <div class="organic-divider bg-ivory">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill: #E6DACE;">
+            <path d="M0,70 C240,0 480,100 720,70 S1200,0 1440,70 L1440,100 L0,100 Z" />
+        </svg>
+    </div>
+    <!-- Organic Divider END -->
+
+    <!-- Featured work Section START -->
+
+    <!-- <section id="moments" class="section-padding bg-moments-bg paper-texture-dark">
+        <div class="container mx-auto">
+            <h2 class="section-title animated-element">Featured Work</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animated-element">
+
+                <div
+                    class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="bg-white p-4">
+                        <img src="https://www.cff.org/themes/custom/outline_frontend/logo.svg"
+                            alt="Cystic Fibrosis Foundation Logo" class="w-full h-40 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">Cystic Fibrosis Foundation</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Sharing my mental health journey with CF, providing hope
+                            and insights for the community through authentic storytelling and advocacy.</p>
+                        <a href="https://www.cff.org/community-posts/2025-07/what-ive-learned-my-mental-health-journey-cf"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Read Article <i data-lucide="external-link" class="h-4 w-4 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="relative">
+                        <img src="https://img.youtube.com/vi/_RnVHj5xO-g/hqdefault.jpg"
+                            alt="Breathe Easy Podcast Thumbnail" class="w-full aspect-video object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">Breathe Easy Podcast</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Featured guest discussing life with cystic fibrosis,
+                            sharing personal experiences and inspiring others in the CF community.</p>
+                        <a href="https://www.youtube.com/watch?v=_RnVHj5xO-g" target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Watch Episode <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="relative">
+                        <img src="https://img.youtube.com/vi/-rwC_2Ss7bs/hqdefault.jpg" alt="BreatheCon 2025 Thumbnail"
+                            class="w-full aspect-video object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">BreatheCon 2025</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Speaking at the premier CF conference, connecting with
+                            the community and sharing insights on living fully with chronic illness.</p>
+                        <a href="https://www.youtube.com/watch?v=-rwC_2Ss7bs" target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Watch Video <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="bg-white p-4">
+                        <img src="/images/LiveFearlesslyFoundation.png" alt="Live Fearlessly Foundation Logo"
+                            class="w-full h-40 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">Live Fearlessly Foundation</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Ambassador and advocate, helping to spread awareness and
+                            support for those living with cystic fibrosis through community engagement.</p>
+                        <a href="https://livefearlesslyfoundation.com/devanshi-dubey" target="_blank"
+                            rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Read Article <i data-lucide="external-link" class="h-4 w-4 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="relative bg-white p-4">
+                        <img src="images/ucsdhealth_logo.jpeg" alt="CFPFAC Webinar Thumbnail"
+                            class="w-full h-40 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">CFPFAC Webinar</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Participating in patient and family advisory committee
+                            discussions, contributing to healthcare improvements and patient advocacy.</p>
+                        <a href="https://drive.google.com/file/d/1RF-POOSKnHo_pj7yu-N2x_ZYE2f61iQp/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Watch Video <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-lg text-text-main/90 mt-12 animated-element font-poppins">Click any work to
+                dive in—it’s like flipping through my memory book.</p>
+        </div>
+    </section> -->
+
+    <section id="moments" class="section-padding bg-moments-bg paper-texture-dark">
+        <div class="container mx-auto">
+            <h2 class="section-title animated-element">Featured Work</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animated-element">
+
+                <div
+                    class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="bg-white p-3">
+                        <img src="https://www.cff.org/themes/custom/outline_frontend/logo.svg"
+                            alt="Cystic Fibrosis Foundation Logo" class="w-full h-40 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">Cystic Fibrosis Foundation</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Sharing my mental health journey with CF, providing hope
+                            and insights for the community through authentic storytelling and advocacy.</p>
+                        <a href="https://www.cff.org/community-posts/2025-07/what-ive-learned-my-mental-health-journey-cf"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Read Article <i data-lucide="external-link" class="h-4 w-4 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="bg-white p-3">
+                        <img src="/images/LiveFearlesslyFoundation.png" alt="Live Fearlessly Foundation Logo"
+                            class="w-full h-40 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">Live Fearlessly Foundation</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Ambassador and advocate, helping to spread awareness and
+                            support for those living with cystic fibrosis through community engagement.</p>
+                        <a href="https://livefearlesslyfoundation.com/devanshi-dubey" target="_blank"
+                            rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Read Article <i data-lucide="external-link" class="h-4 w-4 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="relative bg-white p-3">
+                        <img src="images/ucsdhealth_logo.jpeg" alt="CFPFAC Webinar Thumbnail"
+                            class="w-full h-40 object-contain">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">CFPFAC Webinar</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Participating in patient and family advisory committee
+                            discussions, contributing to healthcare improvements and patient advocacy.</p>
+                        <a href="https://drive.google.com/file/d/1RF-POOSKnHo_pj7yu-N2x_ZYE2f61iQp/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Watch Video <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animated-element">
+                <div
+                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="relative">
+                        <img src="https://img.youtube.com/vi/_RnVHj5xO-g/hqdefault.jpg"
+                            alt="Breathe Easy Podcast Thumbnail" class="w-full aspect-video object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">Breathe Easy Podcast</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Featured guest discussing life with cystic fibrosis,
+                            sharing personal experiences and inspiring others in the CF community.</p>
+                        <a href="https://www.youtube.com/watch?v=_RnVHj5xO-g" target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Watch Episode <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div class="relative">
+                        <img src="https://img.youtube.com/vi/-rwC_2Ss7bs/hqdefault.jpg" alt="BreatheCon 2025 Thumbnail"
+                            class="w-full aspect-video object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">BreatheCon 2025</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">Speaking at the premier CF conference, connecting with
+                            the community and sharing insights on living fully with chronic illness.</p>
+                        <a href="https://www.youtube.com/watch?v=-rwC_2Ss7bs" target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Watch Video <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-lg text-text-main/90 mt-12 animated-element font-poppins">Click any work to
+                dive in—it’s like flipping through my memory book.</p>
+        </div>
+    </section>
+    <!-- Featured work END -->
+
+    <!-- Organic Divider START -->
+    <div class="organic-divider bg-[#E6DACE]">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill: #FAF0E6;">
+            <path d="M0,30 C240,100 480,0 720,30 S1200,100 1440,30 L1440,0 L0,0 Z"
+                transform="scale(1, -1) translate(0, -100)" />
+        </svg>
+    </div>
+    <!-- Organic Divider END -->
+
+    <!-- Connect Section START -->
+    <section id="connect" class="section-padding bg-ivory paper-texture-light">
+        <div class="container mx-auto text-center">
+            <h2 class="section-title animated-element">Let’s Connect</h2>
+            <p class="text-xl text-text-main/90 mb-10 max-w-lg mx-auto animated-element">I’d love to hear from you—drop
+                me a line or find me exploring and sharing here!</p>
+            <div class="flex justify-center space-x-6 md:space-x-10 mb-10 animated-element">
+                <a href="mailto:devanshi.dubey27@gmail.com" target="_blank" rel="noopener noreferrer"
+                    class="social-icon group" aria-label="Email Alexandra">
+                    <i data-lucide="mail"
+                        class="h-10 w-10 md:h-12 md:w-12 text-forest-green group-hover:text-lavender transition-all duration-300 transform group-hover:scale-110"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/devanshi-dubey/" target="_blank" rel="noopener noreferrer"
+                    class="social-icon group" aria-label="Devanshi's LinkedIn Profile">
+                    <i data-lucide="linkedin"
+                        class="h-10 w-10 md:h-12 md:w-12 text-forest-green group-hover:text-lavender transition-all duration-300 transform group-hover:scale-110"></i>
+                </a>
+                <a href="https://www.instagram.com/your-username/" target="_blank" rel="noopener noreferrer"
+                    class="social-icon group" aria-label="Devanshi's Instagram Profile">
+                    <i data-lucide="instagram"
+                        class="h-10 w-10 md:h-12 md:w-12 text-forest-green group-hover:text-lavender transition-all duration-300 transform group-hover:scale-110"></i>
+                </a>
+            </div>
+            <p class="text-sm text-text-main/70 animated-element">Can’t wait to connect!</p>
+        </div>
+    </section>
+    <!-- Connect Section END -->
+
+    <!-- Footer START -->
+
+    <!-- <footer class="bg-dark-slate text-text-light py-12">
+        <div class="container mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <a href="#home" aria-label="Go to top of page"
+                    class="text-3xl font-pacifico text-lavender hover:text-white transition-colors duration-300">DD</a>
+                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-base" aria-label="Footer">
+                    <a href="#home"
+                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Home</a>
+                    <a href="#my-story"
+                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">My Story</a>
+                    <a href="#milestones"
+                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Milestones</a>
+                    <a href="#moments"
+                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Featured Work</a>
+                    <a href="#connect"
+                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Connect</a>
+                </nav>
+            </div>
+
+            <hr class="border-text-light/20 my-8">
+
+            <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-6">
+                <p class="text-sm text-text-light/60">© 2025 Devanshi Dubey. All Rights Reserved.</p>
+
+                <div class="flex items-center gap-5">
+                    <a href="mailto:devanshi.dubey27@gmail.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Email Devanshi" class="group">
+                        <i data-lucide="mail"
+                            class="h-6 w-6 text-text-light/70 group-hover:text-lavender group-hover:scale-110 transition-all duration-300"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/devanshi-dubey/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Devanshi's LinkedIn Profile" class="group">
+                        <i data-lucide="linkedin"
+                            class="h-6 w-6 text-text-light/70 group-hover:text-lavender group-hover:scale-110 transition-all duration-300"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your-username/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Devanshi's Instagram Profile" class="group">
+                        <i data-lucide="instagram"
+                            class="h-6 w-6 text-text-light/70 group-hover:text-lavender group-hover:scale-110 transition-all duration-300"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer> -->
+
+    <footer class="bg-dark-slate text-text-light py-10 md:py-16 px-6">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-8">
+                <a href="#home" class="text-2xl font-pacifico text-lavender">DD</a>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+                    <a href="#home" class="hover:text-lavender transition-colors">Home</a>
+                    <a href="#my-story" class="hover:text-lavender transition-colors">My Story</a>
+                    <a href="#milestones" class="hover:text-lavender transition-colors">Milestones</a>
+                    <a href="#moments" class="hover:text-lavender transition-colors">Featured Work</a>
+                    <a href="#connect" class="hover:text-lavender transition-colors">Connect</a>
+                </div>
+            </div>
+
+            <hr class="border-text-light/20 my-6">
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-text-light/70">
+                <p>© 2025 Devanshi Dubey. Made with 💜</p>
+                <p>Designed to share my journey—feel free to save, share, or carry its essence forward.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer END -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

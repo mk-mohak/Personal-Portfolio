@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey • Devanshi Dubey</title>
+    <meta name="description" content="A deeper dive into the journey of Devanshi Dubey.">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        // Copied from your main page for theme consistency
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ivory': '#FAF0E6',
+                        'forest-green': '#3A5A40',
+                        'lavender': '#B2A4FF',
+                        'dark-slate': '#2F4F4F',
+                        'text-main': '#333333',
+                        'text-light': '#F0F0F0',
+                        'my-story-bg': '#E6DACE',
+                        'moments-bg': '#E6DACE',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        lora: ['Lora', 'serif'],
+                        pacifico: ['Pacifico', 'cursive'],
+                        caveat: ['Caveat', 'cursive'],
+                        'montserrat-alternates': ['"Montserrat Alternates"', 'sans-serif'],
+                        philosopher: ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        /* Copied from your main page for theme consistency */
+        @layer base {
+            h1, h2, h3, h4, h5, h6 {
+                @apply font-poppins;
+            }
+            p, span, div, li, a, button {
+                @apply font-poppins;
+            }
+            body {
+                @apply bg-ivory text-text-main;
+            }
+        }
+        .section-padding {
+            @apply py-20 md:py-28 px-6 md:px-12 lg:px-20;
+        }
+        .organic-divider svg {
+            display: block;
+            width: 100%;
+            height: auto; 
+        }
+        /* You can link to your style.css if it contains the paper-texture styles */
+        .paper-texture-light {
+            background-image: url('data:image/svg+xml,...'); /* Add your paper texture SVG/URL here */
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <a href="index.html"
+        class="fixed top-6 right-6 z-50 inline-flex items-center gap-x-2 bg-ivory/70 text-forest-green px-4 py-2 rounded-lg shadow-lg hover:bg-forest-green hover:text-ivory transition-all duration-300 group">
+        <i data-lucide="arrow-left" class="h-5 w-5 transition-transform group-hover:-translate-x-1"></i>
+        <span class="font-semibold">Back to Home</span>
+    </a>
+
+
+    <main>
+        <header class="relative h-[60vh] flex items-center justify-center text-center bg-cover bg-center"
+            style="background-image: url('images/bgh.jpg');">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 font-poppins">My Journey</h1>
+                <p class="text-xl md:text-2xl text-white/90 font-lora italic">A chapter from the book of my life.</p>
+            </div>
+        </header>
+
+
+        <section class="section-padding bg-my-story-bg paper-texture-light -mt-2">
+            <div class="container mx-auto">
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2 prose lg:prose-xl max-w-none text-lg leading-relaxed">
+                        <p>
+                            Every journey begins with a single step, but mine felt more like a leap of faith into the
+                            unknown. Growing up in a place where traditions were the bedrock of life, I always felt a
+                            pull towards horizons I couldn't yet see. This is the story of that pull—of embracing
+                            uncertainty, collecting moments instead of things, and discovering that the longest journey
+                            is the one within.
+                        </p>
+                        <p>
+                            My travels taught me that a map can only show you the way; it cannot show you the warmth of
+                            a
+                            stranger's smile, the taste of a foreign spice that feels like home, or the sound of a
+                            language you don't understand but feel in your heart. These are the treasures I've gathered.
+                        </p>
+                        <figure class="my-12">
+                            <img src="https://placehold.co/1200x800/FAF0E6/3A5A40?text=Adventure"
+                                alt="A meaningful photo from a journey" class="rounded-lg shadow-xl">
+                            <figcaption class="text-center text-base italic mt-4">A quiet moment of reflection during a
+                                trip that changed everything.</figcaption>
+                        </figure>
+                        <p>
+                            But this journey wasn't only about places; it was about perspective. It was about learning
+                            to be resilient in the face of challenges, to find beauty in imperfection, and to understand
+                            that vulnerability is not a weakness, but the surest path to connection. Each milestone,
+                            each moment of doubt, and each unexpected joy has woven itself into the fabric of who I am
+                            today.
+                        </p>
+                        <p>
+                            This page is a deeper dive into that tapestry. Thank you for walking a part of this path
+                            with me.
+                        </p>
+                    </div>
+
+                    <aside class="lg:col-span-1">
+                        <div class="sticky top-28">
+                            <blockquote
+                                class="pull-quote border-l-4 border-forest-green pl-6 italic text-2xl text-forest-green my-6 font-lora">
+                                "The real voyage of discovery consists not in seeking new landscapes, but in having new
+                                eyes."
+                            </blockquote>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark-slate text-text-light py-10 md:py-16 px-6">
+        <div class="container mx-auto text-center">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-8 mb-8">
+                <a href="index.html" class="text-2xl font-pacifico text-lavender">DD</a>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+                    <a href="index.html#home" class="hover:text-lavender transition-colors">Home</a>
+                    <a href="index.html#my-story" class="hover:text-lavender transition-colors">My Story</a>
+                    <a href="index.html#milestones" class="hover:text-lavender transition-colors">Milestones</a>
+                    <a href="index.html#moments" class="hover:text-lavender transition-colors">Featured Work</a>
+                    <a href="index.html#connect" class="hover:text-lavender transition-colors">Connect</a>
+                </div>
+                <p class="text-sm">© 2025 Devanshi Dubey.<br class="sm:hidden"> Made with 💜</p>
+            </div>
+            <hr class="border-text-light/20 my-6">
+            <p class="text-xs text-text-light/70">Designed to share my journey—feel free to save, share, or carry its
+                essence forward.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
