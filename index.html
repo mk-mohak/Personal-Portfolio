@@ -66,7 +66,7 @@
         .section-title {
             @apply text-4xl md:text-5xl font-bold text-forest-green mb-12 text-center;
         }
-        .section-padding { /* Adjusted padding for 80-120px desktop, scaled for mobile */
+        .section-padding {
             @apply py-20 md:py-28 px-6 md:px-12 lg:px-20; /* e.g. 80px mobile, 112px tablet, ~112px desktop */
         }
         .organic-divider svg {
@@ -94,6 +94,10 @@
                     <a href="#moments"
                         class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Featured
                         Work</a>
+                    <a href="#resources"
+                        class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Resources</a>
+                    <a href="#engagements"
+                        class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Engagements</a>
                     <a href="#connect"
                         class="nav-link font-montserrat-alternates font-bold text-text-main/80 hover:text-forest-green font-bold transition-colors">Connect</a>
                 </div>
@@ -139,6 +143,10 @@
             class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Timelines</a>
         <a href="#moments"
             class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Moments</a>
+        <a href="#resources"
+            class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Resources</a>
+        <a href="#engagements"
+            class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Engagements</a>
         <a href="#connect"
             class="mobile-nav-link text-3xl font-montserrat-alternates text-forest-green hover:text-lavender transition-colors">Connect</a>
         <div class="border-t border-forest-green/20 w-1/2 my-4"></div>
@@ -203,12 +211,12 @@
                         researchers, and industry to drive meaningful change and inspire hope.</p>
 
                     <!-- Button Added Here -->
-                    <div class="mt-8">
+                    <!-- <div class="mt-8">
                         <a href="journey.html"
                             class="ripple-button bg-transparent border-2 border-forest-green text-forest-green px-4 py-2 rounded-xl text-[0.85rem] font-semibold hover:bg-forest-green hover:text-ivory transition-all duration-300 shadow-lg inline-block">
                             Read more about my journey
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -319,114 +327,17 @@
     <!-- Milestones Section END -->
 
     <!-- Organic Divider START -->
-    <div class="organic-divider bg-ivory">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill: #E6DACE;">
-            <path d="M0,70 C240,0 480,100 720,70 S1200,0 1440,70 L1440,100 L0,100 Z" />
+    <div class="organic-divider  bg-[#FAF0E6]">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill: #E6DACE">
+            <path d="M0,30 C240,100 480,0 720,30 S1200,100 1440,30 L1440,0 L0,0 Z"
+                transform="scale(1, -1) translate(0, -100)"></path>
         </svg>
     </div>
     <!-- Organic Divider END -->
 
+
+
     <!-- Featured work Section START -->
-
-    <!-- <section id="moments" class="section-padding bg-moments-bg paper-texture-dark">
-        <div class="container mx-auto">
-            <h2 class="section-title animated-element">Featured Work</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animated-element">
-
-                <div
-                    class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
-                    <div class="bg-white p-4">
-                        <img src="https://www.cff.org/themes/custom/outline_frontend/logo.svg"
-                            alt="Cystic Fibrosis Foundation Logo" class="w-full h-40 object-contain">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-bold text-xl text-gray-800">Cystic Fibrosis Foundation</h3>
-                        <p class="text-gray-600 mt-2 flex-grow">Sharing my mental health journey with CF, providing hope
-                            and insights for the community through authentic storytelling and advocacy.</p>
-                        <a href="https://www.cff.org/community-posts/2025-07/what-ive-learned-my-mental-health-journey-cf"
-                            target="_blank" rel="noopener noreferrer"
-                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
-                            Read Article <i data-lucide="external-link" class="h-4 w-4 ml-1.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div
-                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/_RnVHj5xO-g/hqdefault.jpg"
-                            alt="Breathe Easy Podcast Thumbnail" class="w-full aspect-video object-cover">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-bold text-xl text-gray-800">Breathe Easy Podcast</h3>
-                        <p class="text-gray-600 mt-2 flex-grow">Featured guest discussing life with cystic fibrosis,
-                            sharing personal experiences and inspiring others in the CF community.</p>
-                        <a href="https://www.youtube.com/watch?v=_RnVHj5xO-g" target="_blank" rel="noopener noreferrer"
-                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
-                            Watch Episode <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div
-                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
-                    <div class="relative">
-                        <img src="https://img.youtube.com/vi/-rwC_2Ss7bs/hqdefault.jpg" alt="BreatheCon 2025 Thumbnail"
-                            class="w-full aspect-video object-cover">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-bold text-xl text-gray-800">BreatheCon 2025</h3>
-                        <p class="text-gray-600 mt-2 flex-grow">Speaking at the premier CF conference, connecting with
-                            the community and sharing insights on living fully with chronic illness.</p>
-                        <a href="https://www.youtube.com/watch?v=-rwC_2Ss7bs" target="_blank" rel="noopener noreferrer"
-                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
-                            Watch Video <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
-                    <div class="bg-white p-4">
-                        <img src="/images/LiveFearlesslyFoundation.png" alt="Live Fearlessly Foundation Logo"
-                            class="w-full h-40 object-contain">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-bold text-xl text-gray-800">Live Fearlessly Foundation</h3>
-                        <p class="text-gray-600 mt-2 flex-grow">Ambassador and advocate, helping to spread awareness and
-                            support for those living with cystic fibrosis through community engagement.</p>
-                        <a href="https://livefearlesslyfoundation.com/devanshi-dubey" target="_blank"
-                            rel="noopener noreferrer"
-                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
-                            Read Article <i data-lucide="external-link" class="h-4 w-4 ml-1.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div
-                    class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
-                    <div class="relative bg-white p-4">
-                        <img src="images/ucsdhealth_logo.jpeg" alt="CFPFAC Webinar Thumbnail"
-                            class="w-full h-40 object-contain">
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="font-bold text-xl text-gray-800">CFPFAC Webinar</h3>
-                        <p class="text-gray-600 mt-2 flex-grow">Participating in patient and family advisory committee
-                            discussions, contributing to healthcare improvements and patient advocacy.</p>
-                        <a href="https://drive.google.com/file/d/1RF-POOSKnHo_pj7yu-N2x_ZYE2f61iQp/view?usp=sharing"
-                            target="_blank" rel="noopener noreferrer"
-                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
-                            Watch Video <i data-lucide="play-circle" class="h-5 w-5 ml-1.5"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-center text-lg text-text-main/90 mt-12 animated-element font-poppins">Click any work to
-                dive in—it’s like flipping through my memory book.</p>
-        </div>
-    </section> -->
 
     <section id="moments" class="section-padding bg-moments-bg paper-texture-dark">
         <div class="container mx-auto">
@@ -455,7 +366,7 @@
                 <div
                     class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
                     <div class="bg-white p-3">
-                        <img src="/images/LiveFearlesslyFoundation.png" alt="Live Fearlessly Foundation Logo"
+                        <img src="/images/LiveFearlesslyFoundation.jpg" alt="Live Fearlessly Foundation Logo"
                             class="w-full h-40 object-contain">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
@@ -471,10 +382,32 @@
                 </div>
 
                 <div
+                    class="bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
+                    <div>
+                        <img src="/images/bionews.jpg" alt="Bionews Logo"
+                            class="w-full h-[185px] object-cover object-center block rounded-t-lg">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="font-bold text-xl text-gray-800">Bionews, Inc.</h3>
+                        <p class="text-gray-600 mt-2 flex-grow">I’m living and loving after my CF diagnosis</p>
+                        <a href="https://cysticfibrosisnewstoday.com/guest-voice/guest-voice-living-loving-after-cf-diagnosis/"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group font-semibold text-forest-green inline-flex items-center self-start mt-4">
+                            Read Article <i data-lucide="external-link" class="h-4 w-4 ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animated-element">
+
+                <div
                     class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
-                    <div class="relative bg-white p-3">
+                    <div class="relative bg-white">
                         <img src="images/ucsdhealth_logo.jpeg" alt="CFPFAC Webinar Thumbnail"
-                            class="w-full h-40 object-contain">
+                            class="w-full h-[195px]  object-cover object-center block rounded-t-lg">
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="font-bold text-xl text-gray-800">CFPFAC Webinar</h3>
@@ -487,9 +420,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animated-element">
                 <div
                     class="group bg-white/50 rounded-lg shadow-lg flex flex-col overflow-hidden transition-transform hover:scale-105 duration-300">
                     <div class="relative">
@@ -533,12 +464,439 @@
 
     <!-- Organic Divider START -->
     <div class="organic-divider bg-[#E6DACE]">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill:  #FAF0E6;">
+            <path d="M0,70 C240,0 480,100 720,70 S1200,0 1440,70 L1440,100 L0,100 Z"></path>
+        </svg>
+    </div>
+    <!-- Organic Divider END -->
+
+    <!-- Engagements Section START -->
+    <section id="engagements" class="section-padding bg-ivory paper-texture-light">
+        <div class="container mx-auto">
+            <h2 class="section-title animated-element">Engagements</h2>
+
+            <!-- Introduction -->
+            <div class="text-center mb-12 animated-element">
+                <p class="text-lg text-text-main/90 max-w-3xl mx-auto">
+                    Speaking engagements, panel discussions, and collaborative opportunities where I share my journey
+                    and advocate for the CF community and healthcare equity.
+                </p>
+            </div>
+
+            <!-- Engagements Timeline -->
+            <div class="space-y-12">
+
+                <!-- Engagement Item 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-8 animated-element">
+                    <div class="lg:w-1/2">
+                        <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                            <img src="https://placehold.co/600x400/E6DACE/3A5A40?text=BreatheCon+2025"
+                                alt="BreatheCon 2025 Speaking"
+                                class="w-full aspect-video object-cover transition-transform duration-300 hover:scale-105">
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-forest-green text-ivory px-3 py-1 rounded-full text-sm font-medium">
+                                    Keynote
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="calendar" class="h-5 w-5 text-forest-green"></i>
+                            <span class="text-forest-green font-semibold">October 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">BreatheCon 2025</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Delivered a keynote presentation on "Living Fully with Chronic Illness" to over 500 CF
+                            community members,
+                            focusing on mental health advocacy and patient empowerment strategies.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full">Keynote
+                                Speaker</span>
+                            <span class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full">Mental
+                                Health</span>
+                            <span class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full">500+
+                                Attendees</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center text-forest-green font-semibold hover:text-lavender transition-colors">
+                            Watch Recording
+                            <i data-lucide="play-circle" class="h-4 w-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Engagement Item 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-8 animated-element">
+                    <div class="lg:w-1/2">
+                        <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                            <img src="https://placehold.co/600x400/E6DACE/3A5A40?text=Healthcare+Panel"
+                                alt="Healthcare Equity Panel"
+                                class="w-full aspect-video object-cover transition-transform duration-300 hover:scale-105">
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-lavender text-white px-3 py-1 rounded-full text-sm font-medium">
+                                    Panel
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="calendar" class="h-5 w-5 text-forest-green"></i>
+                            <span class="text-forest-green font-semibold">September 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Healthcare Equity Summit</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Participated in a panel discussion on "Global Perspectives on Rare Disease Access,"
+                            sharing insights on healthcare disparities and the importance of patient advocacy in policy
+                            change.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full">Panel
+                                Discussion</span>
+                            <span class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full">Healthcare
+                                Equity</span>
+                            <span class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full">Global
+                                Health</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center text-forest-green font-semibold hover:text-lavender transition-colors">
+                            Read Summary
+                            <i data-lucide="external-link" class="h-4 w-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Engagement Item 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-8 animated-element">
+                    <div class="lg:w-1/2">
+                        <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                            <img src="https://placehold.co/600x400/E6DACE/3A5A40?text=CF+Webinar"
+                                alt="CF Patient Advisory Committee"
+                                class="w-full aspect-video object-cover transition-transform duration-300 hover:scale-105">
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-forest-green text-ivory px-3 py-1 rounded-full text-sm font-medium">
+                                    Advisory
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="calendar" class="h-5 w-5 text-forest-green"></i>
+                            <span class="text-forest-green font-semibold">August 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">CFPFAC Webinar Series</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Led a webinar for the Cystic Fibrosis Patient and Family Advisory Committee,
+                            discussing patient-centered care approaches and the integration of patient voices in
+                            clinical research.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full">Webinar
+                                Host</span>
+                            <span class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full">Patient
+                                Advisory</span>
+                            <span class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full">Clinical
+                                Research</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center text-forest-green font-semibold hover:text-lavender transition-colors">
+                            View Recording
+                            <i data-lucide="play-circle" class="h-4 w-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Engagements -->
+            <div class="mt-16 animated-element">
+                <h3 class="text-3xl font-bold text-center text-forest-green mb-8">Upcoming Engagements</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Upcoming Event 1 -->
+                    <div
+                        class="bg-gradient-to-br from-forest-green/5 to-lavender/10 rounded-xl p-6 border border-forest-green/20">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Global CF Conference 2026</h4>
+                                <p class="text-forest-green font-medium">March 2026 • Virtual</p>
+                            </div>
+                            <span
+                                class="bg-forest-green/10 text-forest-green px-3 py-1 rounded-full text-sm font-medium">
+                                Confirmed
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Workshop facilitator for "Patient Advocacy in the Digital Age" - exploring how technology
+                            can amplify patient voices and improve healthcare outcomes.
+                        </p>
+                        <div class="flex items-center text-forest-green font-medium">
+                            <i data-lucide="users" class="h-4 w-4 mr-2"></i>
+                            Workshop Facilitator
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Event 2 -->
+                    <div
+                        class="bg-gradient-to-br from-lavender/5 to-forest-green/10 rounded-xl p-6 border border-forest-green/20">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Healthcare Innovation Summit</h4>
+                                <p class="text-forest-green font-medium">May 2026 • San Francisco</p>
+                            </div>
+                            <span class="bg-lavender/20 text-forest-green px-3 py-1 rounded-full text-sm font-medium">
+                                Invited
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Keynote speaker addressing the role of patient experiences in shaping healthcare innovation
+                            and the future of personalized medicine.
+                        </p>
+                        <div class="flex items-center text-forest-green font-medium">
+                            <i data-lucide="mic" class="h-4 w-4 mr-2"></i>
+                            Keynote Speaker
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaking Inquiry CTA -->
+            <div
+                class="text-center mt-12 bg-gradient-to-r from-forest-green/10 to-lavender/10 rounded-2xl p-8 animated-element">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Interested in Having Me Speak?</h3>
+                <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                    I'm always excited to share my story and advocate for the CF community.
+                    Whether it's a conference, webinar, or panel discussion, let's connect.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#connect"
+                        class="ripple-button bg-forest-green text-ivory px-6 py-3 rounded-lg font-semibold hover:bg-transparent border-2 border-forest-green hover:text-forest-green transition-all duration-300 shadow-lg">
+                        Speaking Inquiry
+                    </a>
+                    <a href="#"
+                        class="bg-transparent border-2 border-forest-green text-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-forest-green hover:text-ivory transition-all duration-300">
+                        View Speaking Topics
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Engagements Section END -->
+
+
+    <!-- Organic Divider START -->
+    <div class="organic-divider  bg-[#FAF0E6]">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill: #E6DACE">
+            <path d="M0,30 C240,100 480,0 720,30 S1200,100 1440,30 L1440,0 L0,0 Z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+        </svg>
+    </div>
+    <!-- Organic Divider END -->
+
+    <!-- Resources Section START -->
+    <section id="resources" class="section-padding bg-my-story-bg paper-texture-dark">
+        <div class="container mx-auto">
+            <h2 class="section-title animated-element">Resources</h2>
+
+            <!-- Introduction -->
+            <div class="text-center mb-12 animated-element">
+                <p class="text-lg text-text-main/90 max-w-3xl mx-auto">
+                    A curated collection of tools, guides, and insights I've gathered throughout my journey.
+                    These resources have been instrumental in my advocacy work and living with chronic illness.
+                </p>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animated-element">
+
+                <!-- Resource Card 1 -->
+                <div
+                    class="group bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-forest-green/20 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-forest-green/40">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-forest-green/10 rounded-lg">
+                            <i data-lucide="heart-pulse" class="h-8 w-8 text-forest-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 ml-4">CF Care Toolkit</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Essential resources for managing cystic fibrosis, including treatment guides, mental health
+                        support, and daily care tips.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full font-medium">Healthcare</span>
+                        <span class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full font-medium">Mental
+                            Health</span>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center text-forest-green font-semibold group-hover:text-lavender transition-colors">
+                        Explore Toolkit
+                        <i data-lucide="arrow-right"
+                            class="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- Resource Card 2 -->
+                <div
+                    class="group bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-forest-green/20 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-forest-green/40">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-forest-green/10 rounded-lg">
+                            <i data-lucide="users" class="h-8 w-8 text-forest-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 ml-4">Advocacy Guide</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Step-by-step guidance for becoming an effective patient advocate, including communication
+                        strategies and resources.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full font-medium">Advocacy</span>
+                        <span
+                            class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full font-medium">Communication</span>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center text-forest-green font-semibold group-hover:text-lavender transition-colors">
+                        Download Guide
+                        <i data-lucide="download"
+                            class="h-4 w-4 ml-2 transition-transform group-hover:translate-y-1"></i>
+                    </a>
+                </div>
+
+                <!-- Resource Card 3 -->
+                <div
+                    class="group bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-forest-green/20 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-forest-green/40">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-forest-green/10 rounded-lg">
+                            <i data-lucide="globe" class="h-8 w-8 text-forest-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 ml-4">Global CF Network</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Connecting with CF communities worldwide, organizations, support groups, and international
+                        resources.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full font-medium">Community</span>
+                        <span
+                            class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full font-medium">Global</span>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center text-forest-green font-semibold group-hover:text-lavender transition-colors">
+                        Join Network
+                        <i data-lucide="external-link"
+                            class="h-4 w-4 ml-2 transition-transform group-hover:scale-110"></i>
+                    </a>
+                </div>
+
+                <!-- Resource Card 4 -->
+                <div
+                    class="group bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-forest-green/20 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-forest-green/40">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-forest-green/10 rounded-lg">
+                            <i data-lucide="book-open" class="h-8 w-8 text-forest-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 ml-4">Research Library</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Curated collection of research papers, clinical studies, and evidence-based resources for
+                        informed healthcare decisions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full font-medium">Research</span>
+                        <span
+                            class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full font-medium">Evidence-based</span>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center text-forest-green font-semibold group-hover:text-lavender transition-colors">
+                        Access Library
+                        <i data-lucide="book" class="h-4 w-4 ml-2 transition-transform group-hover:rotate-12"></i>
+                    </a>
+                </div>
+
+                <!-- Resource Card 5 -->
+                <div
+                    class="group bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-forest-green/20 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-forest-green/40">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-forest-green/10 rounded-lg">
+                            <i data-lucide="mic" class="h-8 w-8 text-forest-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 ml-4">Speaking Resources</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Templates, presentation guides, and tools for sharing your story and advocating at conferences
+                        and events.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full font-medium">Speaking</span>
+                        <span
+                            class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full font-medium">Templates</span>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center text-forest-green font-semibold group-hover:text-lavender transition-colors">
+                        Get Templates
+                        <i data-lucide="presentation"
+                            class="h-4 w-4 ml-2 transition-transform group-hover:scale-110"></i>
+                    </a>
+                </div>
+
+                <!-- Resource Card 6 -->
+                <div
+                    class="group bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-forest-green/20 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-forest-green/40">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-forest-green/10 rounded-lg">
+                            <i data-lucide="calendar" class="h-8 w-8 text-forest-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 ml-4">Event Calendar</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Stay updated with CF conferences, webinars, advocacy events, and community gatherings worldwide.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="px-3 py-1 bg-forest-green/10 text-forest-green text-sm rounded-full font-medium">Events</span>
+                        <span
+                            class="px-3 py-1 bg-lavender/20 text-forest-green text-sm rounded-full font-medium">Calendar</span>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center text-forest-green font-semibold group-hover:text-lavender transition-colors">
+                        View Calendar
+                        <i data-lucide="calendar-days"
+                            class="h-4 w-4 ml-2 transition-transform group-hover:scale-110"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12 animated-element">
+                <p class="text-lg text-text-main/80 mb-6">
+                    Have a resource suggestion or want to contribute?
+                </p>
+                <a href="#connect"
+                    class="ripple-button bg-forest-green text-ivory px-6 py-3 rounded-lg font-semibold hover:bg-transparent border-2 border-forest-green hover:text-forest-green transition-all duration-300 shadow-lg">
+                    Share Your Resource
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Resources Section END -->
+
+
+    <!-- Organic Divider START -->
+    <div class="organic-divider bg-[#E6DACE]">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-16 md:h-24" style="fill: #FAF0E6;">
             <path d="M0,30 C240,100 480,0 720,30 S1200,100 1440,30 L1440,0 L0,0 Z"
                 transform="scale(1, -1) translate(0, -100)" />
         </svg>
     </div>
     <!-- Organic Divider END -->
+
+
 
     <!-- Connect Section START -->
     <section id="connect" class="section-padding bg-ivory paper-texture-light">
@@ -570,53 +928,6 @@
 
     <!-- Footer START -->
 
-    <!-- <footer class="bg-dark-slate text-text-light py-12">
-        <div class="container mx-auto px-6">
-
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <a href="#home" aria-label="Go to top of page"
-                    class="text-3xl font-pacifico text-lavender hover:text-white transition-colors duration-300">DD</a>
-                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-base" aria-label="Footer">
-                    <a href="#home"
-                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Home</a>
-                    <a href="#my-story"
-                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">My Story</a>
-                    <a href="#milestones"
-                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Milestones</a>
-                    <a href="#moments"
-                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Featured Work</a>
-                    <a href="#connect"
-                        class="hover:text-lavender transition-all duration-300 hover:-translate-y-0.5">Connect</a>
-                </nav>
-            </div>
-
-            <hr class="border-text-light/20 my-8">
-
-            <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-6">
-                <p class="text-sm text-text-light/60">© 2025 Devanshi Dubey. All Rights Reserved.</p>
-
-                <div class="flex items-center gap-5">
-                    <a href="mailto:devanshi.dubey27@gmail.com" target="_blank" rel="noopener noreferrer"
-                        aria-label="Email Devanshi" class="group">
-                        <i data-lucide="mail"
-                            class="h-6 w-6 text-text-light/70 group-hover:text-lavender group-hover:scale-110 transition-all duration-300"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/devanshi-dubey/" target="_blank" rel="noopener noreferrer"
-                        aria-label="Devanshi's LinkedIn Profile" class="group">
-                        <i data-lucide="linkedin"
-                            class="h-6 w-6 text-text-light/70 group-hover:text-lavender group-hover:scale-110 transition-all duration-300"></i>
-                    </a>
-                    <a href="https://www.instagram.com/your-username/" target="_blank" rel="noopener noreferrer"
-                        aria-label="Devanshi's Instagram Profile" class="group">
-                        <i data-lucide="instagram"
-                            class="h-6 w-6 text-text-light/70 group-hover:text-lavender group-hover:scale-110 transition-all duration-300"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </footer> -->
-
     <footer class="bg-dark-slate text-text-light py-10 md:py-16 px-6">
         <div class="container mx-auto text-center">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-8">
@@ -626,6 +937,8 @@
                     <a href="#my-story" class="hover:text-lavender transition-colors">My Story</a>
                     <a href="#milestones" class="hover:text-lavender transition-colors">Milestones</a>
                     <a href="#moments" class="hover:text-lavender transition-colors">Featured Work</a>
+                    <a href="#resources" class="hover:text-lavender transition-colors">Resources</a>
+                    <a href="#engagements" class="hover:text-lavender transition-colors">Engagements</a>
                     <a href="#connect" class="hover:text-lavender transition-colors">Connect</a>
                 </div>
             </div>
