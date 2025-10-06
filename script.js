@@ -5,16 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
     lucide.createIcons();
     const { animate, stagger } = framerMotion;
     const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-        // Check if the user has scrolled more than 50px from the top
+    
+    // Function to handle navbar background based on scroll position
+    const handleNavbarScroll = () => {
         if (window.scrollY > 50) {
-            // If scrolled, add the blurred background and a shadow
             navbar.classList.add("bg-ivory/80", "backdrop-blur-md", "shadow-lg");
         } else {
-            // If at the top, remove the classes to make it transparent
             navbar.classList.remove("bg-ivory/80", "backdrop-blur-md", "shadow-lg");
         }
-    });
+    };
+
+    // Check initial scroll position on page load
+    handleNavbarScroll();
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleNavbarScroll);
 
     // Mobile menu elements
     const mobileMenuButton = document.getElementById("mobile-menu-button");
